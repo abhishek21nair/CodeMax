@@ -24,4 +24,9 @@ class Manufacture extends Model
 
         return response()->json("datasaved", 200);
     }
+
+    protected function showManufacture(){
+        $manufactures = DB::table('manufacture')->get();
+        return response()->json($manufactures , 200);
+    }
 }

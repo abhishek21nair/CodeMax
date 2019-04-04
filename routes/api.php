@@ -18,3 +18,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/v1/manufacture', 'Manufactures@store');
+Route::get('/v1/manufactures', 'Manufactures@index');
