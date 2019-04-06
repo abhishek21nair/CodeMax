@@ -9,20 +9,14 @@ class Manufactures extends Controller
 {
     //
 
-        public function store(Request $request) {
-       // return 'Manufacture record successfully created with id ';
-       // print_r($request);
+      public function store(Request $request) {
 
-       // die();
        return Manufacture::addManufacture($request->json()->all());
         
     	}
 
     	public function index() {
-       // return 'Manufacture record successfully created with id ';
-       // print_r($request);
-
-       // die();
+ 
        return Manufacture::showManufacture();
         
     	}

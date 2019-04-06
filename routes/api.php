@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Manufactures;
+use App\Http\Controllers\ModelController;
+use App\Http\Controllers\Models;
 use Illuminate\Http\Request;
 
 /*
@@ -19,3 +22,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('/v1/manufacture', 'Manufactures@store');
 Route::get('/v1/manufactures', 'Manufactures@index');
+Route::post('/v1/addModel','ModelController@store');
+Route::get('v1/showmodels','ModelController@index');
